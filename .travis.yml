@@ -13,8 +13,8 @@ before_script:
   - sh -e /etc/init.d/xvfb start
   - ./vendor/laravel/dusk/bin/chromedriver-linux &
   - cp .env.travis .env
-  - cat .env
   - php artisan serve &
 
 script:
+  - cat .env
   - php artisan dusk
