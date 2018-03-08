@@ -5,6 +5,9 @@ dist: trusty
 php:
   - 7.1
 
+before_install:
+  - cp .env.travis .env
+
 install:
   - travis_retry composer install --no-interaction
 
@@ -12,9 +15,7 @@ before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   - ./vendor/laravel/dusk/bin/chromedriver-linux &
-  - cp .env.travis .env
   - php artisan serve &
 
 script:
-  - cat .env
   - php artisan dusk
