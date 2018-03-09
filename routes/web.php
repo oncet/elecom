@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    User::findOrFail(1);
+    User::find(1);
 
     return view('welcome');
 });
