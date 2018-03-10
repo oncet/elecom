@@ -5,6 +5,10 @@ dist: trusty
 php:
   - 7.1
 
+cache:
+  directories:
+  - $HOME/.composer/cache/files
+
 services:
   - postgresql
 
