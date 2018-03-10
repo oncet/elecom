@@ -12,5 +12,7 @@
 */
 
 Route::get('/', function () {
+    User::find(1);
+
     return view('welcome');
 });
