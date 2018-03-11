@@ -9,9 +9,6 @@ cache:
   directories:
   - $HOME/.composer/cache/files
 
-services:
-  - sqlite3
-
 before_install:
   - cp .env.travis .env
 
