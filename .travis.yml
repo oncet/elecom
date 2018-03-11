@@ -27,4 +27,5 @@ before_script:
   - php artisan key:generate
 
 script:
+  - php artisan migrate
   - php artisan dusk
