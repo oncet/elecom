@@ -6,12 +6,13 @@ php:
   - 7.1
 
 env:
-  - APP_ENV=testing
-  - APP_KEY=base64:M6EqxhQS/snjZGujrI3yntQ2M62pCTrSz9dXzVDD0G0=
-  - APP_DEBUG=true
-  - APP_URL=http://127.0.0.1:8000
-  - DB_DATABASE=elecom
-  - DB_USERNAME=postgres
+  global:
+    - APP_ENV=testing
+    - APP_KEY=base64:M6EqxhQS/snjZGujrI3yntQ2M62pCTrSz9dXzVDD0G0=
+    - APP_DEBUG=true
+    - APP_URL=http://127.0.0.1:8000
+    - DB_DATABASE=elecom
+    - DB_USERNAME=postgres
 
 cache:
   directories:
